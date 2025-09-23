@@ -21,3 +21,30 @@ I learnt how to open terminal in that desktop and simply run a command, one of t
 ## References
 
 None.
+______________________________________________________
+# Introduction to Arguments
+This challenge asks you to run the 'hello' command with a single argument 'hackers'.
+## My solve
+**Flag:**'pwn.college{clf3act0hHi8HAHvrvLZuBPrK1Z.QX4YjM1wCOwIzNzEzW}'
+
+
+
+Simply, we execute the hello command with the argument 'hackers' and it gives us the flag, following is an image of it.
+
+
+
+
+<img width="471" height="134" alt="Screenshot 2025-09-23 at 1 33 12 PM" src="https://github.com/user-attachments/assets/d0bff683-cb47-4e95-810e-c64d7b3effeb" 
+  />
+
+
+## What I Learned
+I learnt about the echo command in the theory about arguments above the challenge which simply said that it is analogous to a print statement which returns back what ever one puts into it as argument, and also how cammands can take up multiple arguments, and experienced how to run a command with an argument.
+## References
+None.
+
+
+
+
+
+
