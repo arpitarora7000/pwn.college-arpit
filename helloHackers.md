@@ -42,6 +42,26 @@ Simply, we execute the hello command with the argument 'hackers' and it gives us
 I learnt about the echo command in the theory about arguments above the challenge which simply said that it is analogous to a print statement which returns back what ever one puts into it as argument, and also how cammands can take up multiple arguments, and experienced how to run a command with an argument.
 ## References
 None.
+# Command History
+
+
+In this challenge the flag was injected in the history, we were asked to roll through the history after opening the terminal by using arrows.
+## My solve
+**Flag:**'pwn.college{olRzDC_jljlSh4ksh0kobLUwfcF.0lNzEzNxwCOwIzNzEzW}'
+Just rolling through the history in the terminal which they injected our flag in, and finding our flag was the task, following is an image for it.
+
+
+
+
+
+<img width="827" height="210" alt="Screenshot 2025-09-23 at 1 49 13 PM" src="https://github.com/user-attachments/assets/931cea30-1909-46cc-be69-2f550e1eb1e6" />
+
+
+## What I Learned
+I learned a very useful thing about the terminal, that how can one easily check what commands they've used in past which makes everything accesible.
+## References 
+None.
+
 
 
 
