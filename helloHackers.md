@@ -9,8 +9,9 @@ In this challenge I was asked to open terminal in the pwn.college dojo(desktop) 
 
 Simply, we execute the hello command in the terminal and it gives us the flag, following is an image of it.
 
+<img width="503" height="77" alt="Screenshot 2025-09-24 at 12 54 37 AM" src="https://github.com/user-attachments/assets/9689c507-9043-4134-a2fb-894a75151264" />
 
-<img width="472" height="114" alt="Screenshot 2025-09-23 at 1 07 04 PM" src="https://github.com/user-attachments/assets/1305dcb8-62ef-46f5-b2f1-9cb85493d8e2" />
+
 
 
 
@@ -21,7 +22,6 @@ I learnt how to open terminal in that desktop and simply run a command, one of t
 ## References
 
 None.
-______________________________________________________
 # Introduction to Arguments
 This challenge asks you to run the 'hello' command with a single argument 'hackers'.
 ## My solve
@@ -31,11 +31,11 @@ This challenge asks you to run the 'hello' command with a single argument 'hacke
 
 Simply, we execute the hello command with the argument 'hackers' and it gives us the flag, following is an image of it.
 
+<img width="442" height="78" alt="Screenshot 2025-09-24 at 12 56 02 AM" src="https://github.com/user-attachments/assets/234f2c9d-5537-4422-8185-148db4cc7234" />
 
 
 
-<img width="471" height="134" alt="Screenshot 2025-09-23 at 1 33 12 PM" src="https://github.com/user-attachments/assets/d0bff683-cb47-4e95-810e-c64d7b3effeb" 
-  />
+
 
 
 ## What I Learned
@@ -51,10 +51,11 @@ In this challenge the flag was injected in the history, we were asked to roll th
 Just rolling through the history in the terminal which they injected our flag in, and finding our flag was the task, following is an image for it.
 
 
+<img width="671" height="70" alt="Screenshot 2025-09-24 at 12 58 50 AM" src="https://github.com/user-attachments/assets/80941579-562d-4219-b2b8-f32dba3f9a74" />
 
 
 
-<img width="827" height="210" alt="Screenshot 2025-09-23 at 1 49 13 PM" src="https://github.com/user-attachments/assets/931cea30-1909-46cc-be69-2f550e1eb1e6" />
+
 
 
 ## What I Learned
