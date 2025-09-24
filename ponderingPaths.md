@@ -170,6 +170,38 @@ I simply changed to the root directory and ran ***./challenge/run*** which is a 
 ### References
 None.
 
+# Implicit relative path
+### Problem statement
+In this level, we'll practice referring to paths using . a bit more. This challenge will need you to run it from the /challenge directory. Here, things get slightly tricky.
+
+Linux explicitly avoids automatically looking in the current directory when you provide a "naked" path. Consider the following:
+
+<img width="469" height="65" alt="Screenshot 2025-09-24 at 10 32 21 PM" src="https://github.com/user-attachments/assets/cca212ff-91e3-46b5-a3fe-017cee4478e5" />
+
+
+This will not invoke /challenge/run. This is actually a safety measure: if Linux searched the current directory for programs every time you entered a naked path, you could accidentally execute programs in your current directory that happened to have the same names as core system utilities! As a result, the above commands will yield the following error:
+
+<img width="466" height="45" alt="Screenshot 2025-09-24 at 10 32 37 PM" src="https://github.com/user-attachments/assets/2c9fca11-732a-46ec-a5a2-49beebcc30a7" />
+
+
+We'll explore the mechanisms behind this concept later, but in this challenge, we'll learn how to explicitly use relative paths to launch run in this scenario. The way to do this is to tell Linux that you explicitly want to execute a program in the current directory, using . like in the previous levels. Give it a try now!
+### Key points
+- We have to invoke the program directly from the ***/challenge*** directory.
+- After going to the challenge directory we cannot simply write run to invoke the program because linux doesn't find programs like that in a given directory.
+- I was supposed to launch run by using a relaive path including '.'.
+## My solve
+**Flag :** 'pwn.college{0H8SkrhTb0iB1TomJcnDIq_v5Xy.QXxUTN0wCOwIzNzEzW}'
+
+I simply changed to the /challenge directory and ran the ***./run*** and it ivoked the program by an implicit relative path and gave me the flag, following is an image for it.
+
+<img width="518" height="99" alt="Screenshot 2025-09-24 at 10 53 48 PM" src="https://github.com/user-attachments/assets/cdcde8e4-8c84-4ceb-b58e-dddb3e67d066" />
+
+## What I Learned
+- How to invoke program from within the directory.
+- Ran the ./run to invoke program.
+### References 
+None.
+
 
 
 
