@@ -57,7 +57,7 @@ This affects the "current working directory" of your process (in this case, the 
 As an aside, now you can see what the ~ was in the prompt! It shows the current path that your shell is located at.This challenge will require you to execute the /challenge/run program from a specific path (which it will tell you). You'll need to cd to that directory before rerunning the challenge program. Good luck!
 ### Key points
 - One can navigate around all the files and directories in a filesystem by using the ***cd*** command.
-- This affects the _current working directory_ of your process, in essence all your commands are now running in the directory that you,ve changed to.
+- This affects the _current working directory_ of your process, in essence all your commands are now running in the directory that you've changed to.
 - The ~ in the prompt means that **~** is the current path where the shell is located.
 - I was supposed to change to a directory by the **cd** command and then invoke the program _run_ which lies in the **challenge** directory like in the previous challenge.
 ## My Solve
@@ -95,6 +95,83 @@ Image:
 
 ### References
 None.
+
+# Implicit relative paths, from /
+### Problem statement
+
+Now you're familiar with the concept of referring to absolute paths and changing directories. If you put in absolute paths everywhere, then it really doesn't matter what directory you are in, as you likely found out in the previous three challenges.
+
+However, the current working directory does matter for relative paths.
+
+A relative path is any path that does not start at root (i.e., it does not start with /).
+A relative path is interpreted relative to your current working directory (cwd).
+Your cwd is the directory that your prompt is currently located at.
+This means how you specify a particular file, depends on where the terminal prompt is located.
+
+Imagine we want to access some file located at /tmp/a/b/my_file.
+
+If my cwd is /, then a relative path to the file is tmp/a/b/my_file.
+If my cwd is /tmp, then a relative path to the file is a/b/my_file.
+If my cwd is /tmp/a/b/c, then a relative path to the file is ../my_file. The .. refers to the parent directory.
+Let's try it here! You'll need to run /challenge/run using a relative path while having a current working directory of /. For this level, I'll give you a hint. Your relative path starts with the letter c 😊
+
+
+### Key points
+- The current working directory _cwd_ matters for relative paths.
+- Relative path is any path which doesn't start at the root i.e **/**, it is interpreted relative to the _cwd_, which is where your prompt is currently located at.
+- I was supposed to run ***/challenge/run*** with a relative path while my cwd is **/**.
+## My solve
+**Flag :** 'pwn.college{I77ZnbWFMrPYnouWc318HLE0wmz.QX5QTN0wCOwIzNzEzW}'
+
+I simply changed my directory using _cd_ command to the root directory **/**, and then ran ***challenge/run*** , it is a relative path to my cwd which is /, following is an image for it.
+
+<img width="505" height="149" alt="Screenshot 2025-09-24 at 8 13 07 PM" src="https://github.com/user-attachments/assets/6cb37d2f-6d1b-440f-aab6-59a2ca0100eb" />
+
+## What I Learned
+- I learned what a relative path is, and how is it interpreted relative to the _cwd_.
+- I ran a program with a relative path while my cwd was the root directory.
+### References
+None.
+
+# Explicit relative paths, from /
+### Problem statement 
+Previously, your relative path was "naked": it directly specified the directory to descend into from the current directory. In this level, we're going to explore more explicit relative paths.
+
+In most operating systems, including Linux, every directory has two implicit entries that you can reference in paths: . and ... The first, ., refers right to the same directory, so the following absolute paths are all identical to each other:
+
+/challenge
+/challenge/.
+/challenge/./././././././././
+/./././challenge/././
+The following relative paths are also all identical to each other:
+
+challenge
+./challenge
+./././challenge
+challenge/.
+Of course, if your current working directory is /, the above relative paths are equivalent to the above absolute paths.
+
+This challenge will get you using . in your relative paths. Get ready!
+### Key points
+- Previously, our relative path was **naked** i.e it used to directly specify, which directory to descend to from the cwd.
+- Every directory has two **implicit entries** '.' and '..'. '.' refers right to the same directory.
+- I was supposed to use a relative path with a '.' in it while cwd being /.
+## My solve
+**Flag :** 'pwn.college{ooHBgfgJHDFahAEF3qgVjnYj9-k.QXwUTN0wCOwIzNzEzW}'
+
+I simply changed to the root directory and ran ***./challenge/run*** which is a relative path with a '.' in it, following is an image for it.
+
+<img width="516" height="123" alt="Screenshot 2025-09-24 at 8 27 00 PM" src="https://github.com/user-attachments/assets/b04cf76a-2460-4b96-90f3-9f85a00ad810" />
+
+## What I Learned
+- I learned about the implicit entries.
+- I learned about naked relative paths.
+- I used a relative path with an implicit entry.
+### References
+None.
+
+
+
 
 
 
