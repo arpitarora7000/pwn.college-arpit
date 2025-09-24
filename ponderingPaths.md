@@ -201,6 +201,57 @@ I simply changed to the /challenge directory and ran the ***./run*** and it ivok
 - Ran the ./run to invoke program.
 ### References 
 None.
+# Home Sweet Home
+### Problem Statement
+Every user has a home directory, typically under /home in the filesystem. In the dojo, you are the hacker user, and your home directory is /home/hacker. The home directory is typically where users store most of their personal files. As you make your way through pwn.college, this is where you'll store most of your solutions.
+
+Typically, your shell session will start with your home directory as your current working directory. Consider the initial prompt:
+<img width="471" height="45" alt="Screenshot 2025-09-25 at 12 17 58 AM" src="https://github.com/user-attachments/assets/3a66a14f-6839-4723-9f84-76a04a5ef3e7" />
+
+The ~ in this prompt is the current working directory, with ~ being shorthand for /home/hacker. Bash provides and uses this shorthand because, again, most of your time will be spent in your home directory. Thus, whenever bash sees ~ provided as the start of an argument in a way consistent with a path, it will expand it to your home directory. Consider:
+
+<img width="447" height="236" alt="Screenshot 2025-09-25 at 12 18 33 AM" src="https://github.com/user-attachments/assets/f62075fa-181a-4197-bdfa-c3ad0ac70094" />
+
+
+Note that the expansion of ~ is an absolute path, and only the leading ~ is expanded. This means, for example, that ~/~ will be expanded to /home/hacker/~ rather than /home/hacker/home/hacker.
+
+Fun fact: cd will use your home directory as the default destination:
+
+<img width="450" height="84" alt="Screenshot 2025-09-25 at 12 18 59 AM" src="https://github.com/user-attachments/assets/871c27f8-1c91-4d7c-8914-b4bab804a46f" />
+
+
+Now it's your turn to play! In this challenge, /challenge/run will write a copy of the flag to any file you specify as an argument on the commandline, with these constraints:
+
+1.Your argument must be an absolute path.
+2.The path must be inside your home directory.
+3.Before expansion, your argument must be three characters or less.
+Again, you must specify your path as an argument to /challenge/run as so:
+
+<img width="471" height="46" alt="Screenshot 2025-09-25 at 12 19 51 AM" src="https://github.com/user-attachments/assets/03993802-1b1b-4ab9-8c5c-2fe8802fdd70" />
+
+### Key points
+- Every user has a home directory under _/home_ in the filesystem, my home directory in the dojo is _/home/hacker_
+- Home directory is typically where users store most of their personal files.
+- Shell session starts with the home directory as cwd, ~ is shorthand for /home/hacker.
+- Whenever bash sees ~ provided as the start of an argument in a way consistent with a path, it will expand it to your home directory, only leading ~ is expanded.
+- cd uses ~ as default destination.
+- I was supposed to run /challenge/run which'll write the copy of the flag to any file I specify as an argument.
+
+## My solve
+**Flag :** 'pwn.college{EcMO6OZXR7NvCmO3uILWHT_qFii.QXzMDO0wCOwIzNzEzW}'
+
+I ran ***/challenge/run*** with the argument ***~/c*** which was aligned with the 3 given constriants --> **Argument is absolute path, Path is inside home directory, Argument before expansions is 3 characters or less.**
+
+Image:
+
+<img width="472" height="90" alt="Screenshot 2025-09-25 at 12 37 30 AM" src="https://github.com/user-attachments/assets/4578c14e-7048-42e1-b46e-8fe17854d0a6" />
+
+## What I learned
+- I learned about the home directory, what my home directory is and how is it represented in the first prompt, and how most users save thier personal files in it.
+- Figured a out a way to give an argument following the constraints and getting a copy of the flag.
+### References
+None.
+                     
 
 
 
