@@ -70,8 +70,35 @@ I invoked the program when **~** was the current path and then the terminal told
 ## What I Learned 
 - I learned about a very useful cd command.
 - I learned what the ~ meant in the prompt, and what is my current path.
-## References
+### References
 None.
+# Position elsewhere
+The context of this challenge is same as the previous one, only the directory to change to is different this time being ***/proc/132*** instead of /usr/include, the program to invoke is same.
+## My solve
+**Flag :** 'pwn.college{Unh5An7DQt_aUwx6irvwo8fSbeX.QX3QTN0wCOwIzNzEzW}'
+
+Simply changed the directory and invoked the program which gave me the flag, following is an image of it.
+
+<img width="537" height="183" alt="Screenshot 2025-09-24 at 10 53 39 AM" src="https://github.com/user-attachments/assets/51e3fa9c-2b9d-4d43-8758-47604616e8c1" />
+
+### References 
+None.
+
+# Position Yet elsewhere
+Context of this challenge is also same as the previous 2 and the details are exactly as the 3rd challenge.
+
+**Flag :** 'pwn.college{0CoMMoO-7FUbxYFEu3ibh5LiU7I.QX4QTN0wCOwIzNzEzW}'
+
+Image:
+
+<img width="536" height="223" alt="Screenshot 2025-09-24 at 10 57 51 AM" src="https://github.com/user-attachments/assets/3658639a-0673-423b-b0bf-4ea070c48b3d" />
+
+### References
+None.
+
+
+
+
    
 
 
