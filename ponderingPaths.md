@@ -44,7 +44,7 @@ I just had to simply invoke the program 'run' through the absolute path, so firs
 - How can programs lie in directories which themselves lie in the root directory.
 - How can one still invoke the program by navigating to the directory that the program lies in like ***/challenge/run***.
 ### References 
-None.
+No external references were used for this challenge.
 # Position thy self 
 ## Problem Statement
 
@@ -71,7 +71,7 @@ I invoked the program when **~** was the current path and then the terminal told
 - I learned about a very useful cd command.
 - I learned what the ~ meant in the prompt, and what is my current path.
 ### References
-None.
+Solved entirely with in - challenge hints and exploration.
 # Position elsewhere
 The context of this challenge is same as the previous one, only the directory to change to is different this time being ***/proc/132*** instead of /usr/include, the program to invoke is same.
 ## My solve
@@ -131,7 +131,7 @@ I simply changed my directory using _cd_ command to the root directory **/**, an
 - I learned what a relative path is, and how is it interpreted relative to the _cwd_.
 - I ran a program with a relative path while my cwd was the root directory.
 ### References
-None.
+No external references were used for this challenge.
 
 # Explicit relative paths, from /
 ### Problem statement 
@@ -200,7 +200,7 @@ I simply changed to the /challenge directory and ran the ***./run*** and it ivok
 - How to invoke program from within the directory.
 - Ran the ./run to invoke program.
 ### References 
-None.
+No references
 # Home Sweet Home
 ### Problem Statement
 Every user has a home directory, typically under /home in the filesystem. In the dojo, you are the hacker user, and your home directory is /home/hacker. The home directory is typically where users store most of their personal files. As you make your way through pwn.college, this is where you'll store most of your solutions.
@@ -250,7 +250,7 @@ Image:
 - I learned about the home directory, what my home directory is and how is it represented in the first prompt, and how most users save thier personal files in it.
 - Figured a out a way to give an argument following the constraints and getting a copy of the flag.
 ### References
-None.
+Based purely on reasoning and standard tools.
                      
 
 
