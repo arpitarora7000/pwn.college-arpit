@@ -200,4 +200,64 @@ I just ran ls with **-a** which gave me all files, even the hidden ones, then i 
 None.
 # An Epic Filesystem Quest
 ### Key Points
+- Here the flag is hidden, I had to use ls, cd, and cat commands wherever required to find the flag.
+- Hint given:
+
+ <img width="470" height="261" alt="Screenshot 2025-09-26 at 12 27 31 PM" src="https://github.com/user-attachments/assets/422ea192-ed93-47b8-a03b-124612bde5a1" />
+
+## My solve
+**Flag :**'It is: pwn.college{MrI69ylPcoF4fSIiLHDTEDQ4t3p.QX5IDO0wCOwIzNzEzW}'
+
+ I started with the first hint cd'ing into the root directory then ls into it to check what files and directories are in it, then moved forward with the clues and cues provided, following are images for the same:
+ 
+ <img width="612" height="232" alt="Screenshot 2025-09-26 at 12 31 29 PM" src="https://github.com/user-attachments/assets/1b2cec7f-45c3-443f-990c-496c916dd291" />
+
+_In the second step itself where, we had to cat out a file which had a similar name to HINT or CLUE, it took me time to figure out what file to cat._
+
+<img width="612" height="240" alt="Screenshot 2025-09-26 at 12 32 05 PM" src="https://github.com/user-attachments/assets/248fd3a3-fddf-420b-9308-c39c36302981" />
+
+<img width="620" height="233" alt="Screenshot 2025-09-26 at 12 32 31 PM" src="https://github.com/user-attachments/assets/158cf847-5e7a-46a6-810f-a5f9068c2cdb" />
+
+_It took some time to figure out for the trapped file that I have to cat it out from an absolute path through it's directory and not just cd into the given directory, after that also it wasn't really working, I restarted 3 times and then it got completed._
+
+<img width="616" height="226" alt="Screenshot 2025-09-26 at 12 34 56 PM" src="https://github.com/user-attachments/assets/a46fddd4-da7d-41e2-bdc1-ac219fb92677" />
+
+<img width="624" height="232" alt="Screenshot 2025-09-26 at 12 35 23 PM" src="https://github.com/user-attachments/assets/5d42dfd9-8fe3-4a44-a04e-dc3c493ae8bd" />
+
+<img width="618" height="185" alt="Screenshot 2025-09-26 at 12 35 46 PM" src="https://github.com/user-attachments/assets/0abf718f-ef91-4224-9ef8-dfeb3cfb7a61" />
+
+
+_Here i chose the wrong file to cat, which gave me something else, then catted the **TEASER** file, which gave me the next hint_
+
+<img width="615" height="236" alt="Screenshot 2025-09-26 at 12 37 12 PM" src="https://github.com/user-attachments/assets/22eef49e-d902-4f14-999f-3e47a1cb27d5" />
+
+<img width="618" height="231" alt="Screenshot 2025-09-26 at 12 37 46 PM" src="https://github.com/user-attachments/assets/2a3bf130-1336-4a5b-936f-1e100f612331" />
+
+## What I Learned
+- This really felt like some application of what I'd learned, paving my way through the files and directories to find the flag was an interesting task.
+- I learned about _delayed_ and _trapped_ files.
+### References 
+SENSAI, pwn.college discord.
+
+PS: Didn't really get any help from both of those sources, had to figure it out myself by trying over and over agin.
+# Making directories
+### Key points
+- We learned about making files by the touch command, here have a command ***mkdir*** to make directories
+- I had to make a **/tmp/pwn** directory and then a **college** file in it.
+## My solve
+**Flag :** 'pwn.college{oqXiEb0onr8muQ3KW8dOD03EcMN.QXxMDO0wCOwIzNzEzW}'
+
+I cd'd into the /tmp directory adn then did mkdir pwn which made the pwn directory in it then cd'd into pwn then by touch  command made the college file, following is an image for it:
+
+<img width="613" height="232" alt="Screenshot 2025-09-26 at 12 53 02 PM" src="https://github.com/user-attachments/assets/273d78bf-6d13-483b-aaf6-37cb71f45523" />
+
+## What I Learned
+- Learned about the new command ***mkdir*** which makes directories, if desired directory names are given as arguments.
+- Used the mkdir and touch command simultaneously to make a directory and then a file in it.
+###  References
+None.
+
+# Finding files
+### Key Points
 - 
+
