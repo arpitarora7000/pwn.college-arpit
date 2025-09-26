@@ -21,7 +21,7 @@ I learnt how to open terminal in that desktop and simply run a command, one of t
 
 ## References
 
-None.
+Independent solution - no references used.
 # Introduction to Arguments
 This challenge asks you to run the 'hello' command with a single argument 'hackers'.
 ## My solve
@@ -41,7 +41,7 @@ Simply, we execute the hello command with the argument 'hackers' and it gives us
 ## What I Learned
 I learnt about the echo command in the theory about arguments above the challenge which simply said that it is analogous to a print statement which returns back what ever one puts into it as argument, and also how cammands can take up multiple arguments, and experienced how to run a command with an argument.
 ## References
-None.
+Indepedent solution - no references used.
 # Command History
 
 
