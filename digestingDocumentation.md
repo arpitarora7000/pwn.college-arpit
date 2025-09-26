@@ -85,4 +85,73 @@ No references used, just in - challenges hints.
 3. Though the manpage is randomly named, one still actually uses /challenge/challenge to get the flag!
 ## My solve
 **Flag :** ''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Helpful Programs
+### Key points
+1. Some programs don't have manual pages, but by invoking with a specific argument can tell how to run them.
+2. Usually, this special argument is **--help**, but it can often be -h or, in rare cases, -?, help, or other esoteric values like /? (though that latter is more frequently encountered on Windows).
+3. Here i gotta use the **--help** argument to find out the right commands to get out the flag.
+## My solve
+**Flag :** 'pwn.college{Y0a56CPMGxAQSLDAX6lgOjMz5T3.QX3IDO0wCOwIzNzEzW}'
+
+I just ran the /challenge/challenge as **/challenge/challenge --help**, which showed **-p** as one of the optional arguments, with the description as: _print the value that will cause the -g option to give you the flag_, where -g is as follows:  _-g GIVE_THE_FLAG, --give-the-flag GIVE_THE_FLAG, get the flag, if given the correct value_, i got the correct value for the -g argument by the -p argument, which was 56, then ran it and got the flag, following is an image:
+
+<img width="621" height="234" alt="Screenshot 2025-09-27 at 2 14 41 AM" src="https://github.com/user-attachments/assets/adce1be7-c0ac-4fe2-a3fd-4654ce4d2a41" />
+
+## What I Learned 
+- I learned about the new --help argument for all programs, used mostly for the ones which don't have the manual page, and also different ways to put in the argument.
+### References
+Entirely based on reasoning and in - challenge hints cues.
+# Help for Builtins
+### Key points
+1. Some commands, rather than being programs with man pages and help options, are built into the shell itself. These are called builtins.
+2. Builtins are invoked just like commands, but the shell handles them internally instead of launching other programs. You can get a list of shell builtins by running the builtin help.
+3. In this I gotta use the **help** builtin with challenge as argument and follow the cues, **challenge** is also a shell builtin rather than a program for this challenge.
+## My solve 
+**Flag :** 'pwn.college{QB1zrRJO-31DuBtW4c1m6OaBa8L.QX0ETO0wCOwIzNzEzW}'
+
+I ran the builtin as **help challenge**, it said: _this builtin command will read you the flag, given the right arguments!_ then it showed: 
+
+<img width="526" height="110" alt="Screenshot 2025-09-27 at 2 48 25 AM" src="https://github.com/user-attachments/assets/b2f1fca4-4fb7-4aff-b16c-4a11c914dade" />
+
+Then i ran challenge with the appropriate argument which gave out the flag 
+
+Image:
+
+<img width="567" height="210" alt="Screenshot 2025-09-27 at 2 50 16 AM" src="https://github.com/user-attachments/assets/1d3d8a1d-121b-4fff-a8b4-829de462e669" />
+
+## What I Learned
+- I learned about builtins and used the help builtin for the challenge program.
+### References 
+Just the cues and clues in the challenge and terminal.
+
+                    
+                   
+
+
   
