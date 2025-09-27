@@ -306,4 +306,30 @@ None.
 
 > hacker@dojo:~$
 
+- You can see that accessing the symlink results in getting the original file contents! Also, you can see the usage of ln -s. Note that the original file path comes before the link path in the command!
+ 
+- A symlink can be identified as such with a few methods. For example, the file command, which takes a filename and tells you what type of file it is, will recognize symlinks:
+
+> hacker@dojo:~$ file /tmp/myfile
+> 
+> /tmp/myfile: ASCII text
+> 
+> hacker@dojo:~$ file ~/ourfile
+> 
+> /home/hacker/ourfile: symbolic link to /tmp/myfile
+> 
+> hacker@dojo:~$ 
+
+- Now I gotta create a symlink to get the flag, given info:
+
+> As always, in /flag, but /challenge/catflag will instead read out /home/hacker/not-the-flag. Use the symlink, and fool it into giving you the flag!
+
+## My Solve
+**Flag :** 'wn.college{kz09Oo6eGx5tVZRH4TIlgvIvd6g.QX5ETN1wCOwIzNzEzW}'
+
+I just created a _symlink_ with target being **/flag** and path being ~/not-the-flag, then it said that the path file already exists then i removed it and again creted it then ran /challenge/catflag, which gave the flag.
+
+<img width="568" height="121" alt="Screenshot 2025-09-28 at 4 46 41 AM" src="https://github.com/user-attachments/assets/adaf1f7c-f1d2-447f-910c-d6aa334d0d3a" />
+
+
 
