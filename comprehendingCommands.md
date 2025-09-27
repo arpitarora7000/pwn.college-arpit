@@ -259,5 +259,30 @@ None.
 
 # Finding files
 ### Key Points
-- 
+- The find command takes optional arguments describing the search criteria and the search location. If you don't specify a search criteria, find matches every file. If you don't specify a search location, find uses the current working directory (.).
+ 
+> NOTE: First, there are other files named flag on the filesystem. Don't panic if the first one you try doesn't have the actual flag in it. Second, there're plenty of places in the filesystem that are not accessible to a normal user. These will cause find to generate errors, but you can ignore those; we won't hide the flag there! Finally, find can take a while; be patient!
+- Here i have to find a file named flag using the file command, its in a random directory.
+## My solve
+**Flag :** 'pwn.college{cYhwoXJoray_9vI5kWIAmFneCja.QXyMDO0wCOwIzNzEzW}'
 
+I just simply wrote **find / -name flag** it showed permission denied for some, then two files showed up, the second one on catting gave out the flag.
+
+Image: 
+
+<img width="587" height="93" alt="Screenshot 2025-09-27 at 11 51 55 PM" src="https://github.com/user-attachments/assets/2aa5d648-be32-4d4c-b987-47a17125041f" />
+
+<img width="572" height="56" alt="Screenshot 2025-09-27 at 11 52 13 PM" src="https://github.com/user-attachments/assets/3c84f7e2-9054-41ca-9c15-3a35788f7ebe" />
+
+## What I Learned
+- I learned about the new file command, and how within it we can give arguments which take arguments themselves like name.
+### References
+None.
+# Linking Files
+### Key points
+- This is a common situation that one can run into if using linux for a significant period of time, wanting two programs to access the same data, but the program expects the data to be in two different locations.
+- Linux provides a solution to this problem which is _links_.
+- Links are of two types _Hard and Soft_ soft is also called symbolic
+
+> A hard link is when you address a particular destination with two different names, but lead to the same place or destination.
+> A soft link is when the destination is changed but with that the link's final destination has also changed, analogous to:
