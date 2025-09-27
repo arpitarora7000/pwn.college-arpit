@@ -90,4 +90,61 @@ Image:
 None.
 # Matching paths with []
 ### Key points
-1. 
+1. Globbing happens on a path basis, so you can expand entire paths with your globbed arguments.
+2. Like:
+ 
+> hacker@dojo:~$ touch file_a
+
+> hacker@dojo:~$ touch file_b
+
+> hacker@dojo:~$ touch file_c
+
+> hacker@dojo:~$ ls
+
+> file_a	file_b	file_c
+
+> hacker@dojo:~$ echo Look: /home/hacker/file_[ab]
+
+> Look: /home/hacker/file_a /home/hacker/file_b
+
+3. Hint given:
+ 
+ <img width="472" height="184" alt="Screenshot 2025-09-27 at 3 06 14 PM" src="https://github.com/user-attachments/assets/ea19bb80-c73a-43e7-bea5-e8317f84be78" />
+
+## My solve
+**Flag :** 'pwn.college{IUcjl8-hdZljzbscxKYzQmtdIeg.QX0IDO0wCOwIzNzEzW}'
+
+I just invoked /challenge/run with a single argument, that bracket globs into the absolute paths to the files file_b, file_a, file_s, and file_h.
+
+Following is an image:
+
+<img width="600" height="111" alt="Screenshot 2025-09-27 at 3 08 56 PM" src="https://github.com/user-attachments/assets/16de4af5-d281-4a62-9667-f4062a5f9abe" />
+
+## What I Learned
+- Learned about globbing onpaths basis, and how can i expand entire paths with globbed arguments.
+### References
+No external references used for this challenge.
+#  Multiple Globs
+### Key points
+1. So far, weve specified one glob at a time, but you can do more, Bash supports the expansion of multiple globs in a single word. For example:
+
+<img width="401" height="90" alt="Screenshot 2025-09-27 at 3 12 30 PM" src="https://github.com/user-attachments/assets/14298244-8bba-410d-b51e-0f416467e179" />
+
+2. What happens above is that the shell looks for all files in **/** that start with anything, which can also be blank space i.e nothing, then have an _f_ and an _l_, and end in anything (including _ag_, which makes _flag_).
+3. Hint given:
+ 
+<img width="480" height="187" alt="Screenshot 2025-09-27 at 3 15 21 PM" src="https://github.com/user-attachments/assets/6bcc4cff-fbe2-4c80-9b98-f493e279c30f" />
+
+## My solve
+**Flag :** 'pwn.college{oy3x37IIwirXGG1YM6qhfxGAc_W.0lM3kjNxwCOwIzNzEzW}'
+
+I just cd'd into the /challenge/files directory and thought of an argument to give to /challenge/run, which is 3 characters or less and will cover all words containing the letter p, which was easy to figure out: _*p*_, starts with anything, ends with anything, has the letter p, following is an image.
+
+<img width="498" height="112" alt="Screenshot 2025-09-27 at 3 22 09 PM" src="https://github.com/user-attachments/assets/22650c14-f842-401b-b8a5-4a3ab9435de9" />
+
+## What I Learned
+- I learned about using multiple globs in a single argument.
+### References
+Took a little time to figure out the argument but no references other than the problem statement.
+# Mixing globs
+### Key points
