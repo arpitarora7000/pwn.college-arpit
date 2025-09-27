@@ -84,15 +84,25 @@ No references used, just in - challenges hints.
 2. Now we'll have to use **man man** which'll teach advanced usage of man command, which'll be usable to figure out, how to search for the right man page that in turn will tell how to use **/challenge/challenge**
 3. Though the manpage is randomly named, one still actually uses /challenge/challenge to get the flag!
 ## My solve
-**Flag :** ''
+**Flag :** 'pwn.college{AOkY0kBOR89NiEdBgPlU3nZuZR9.QX2EDO0wCOwIzNzEzW}'
 
+After running **man man**, which was supposed to teach advanced ways to use the man command, so after opening manual page for man it took significant time to search for the argument which'll be further helpful to search for ways to run /challenge/challenge, then i did find one and ran it as follows :
 
+<img width="557" height="42" alt="Screenshot 2025-09-27 at 10 57 34 PM" src="https://github.com/user-attachments/assets/fbfe30ed-a609-4b7f-a6b8-d729f42a2a29" />
 
+Then, I opened the manpage for given **kkidglnuww**, where i found the following :
 
+<img width="533" height="205" alt="Screenshot 2025-09-27 at 10 59 21 PM" src="https://github.com/user-attachments/assets/1f156165-ac29-43ff-8e7e-2cadb5255de5" />
 
+Then I invoked /challenge/challenge with the argument --kkidgl with the argument 089, and then it gave out the flag folowing is an image:
 
+<img width="608" height="71" alt="Screenshot 2025-09-27 at 11 01 47 PM" src="https://github.com/user-attachments/assets/35f068a8-4e6e-435b-807c-691aa9c77261" />
 
-
+## What I Learned
+- Learned about advanced usage of the man command, by exploring its own manpage
+- Figured out a way to invoke the given program using the right arguments which would give out the flag.
+### References
+Few suggestions from pwn.college discord.
 
 
 
