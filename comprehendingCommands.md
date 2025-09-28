@@ -325,7 +325,7 @@ None.
 > As always, in /flag, but /challenge/catflag will instead read out /home/hacker/not-the-flag. Use the symlink, and fool it into giving you the flag!
 
 ## My Solve
-**Flag :** 'wn.college{kz09Oo6eGx5tVZRH4TIlgvIvd6g.QX5ETN1wCOwIzNzEzW}'
+**Flag :** 'pwn.college{kz09Oo6eGx5tVZRH4TIlgvIvd6g.QX5ETN1wCOwIzNzEzW}'
 
 I just created a _symlink_ with target being **/flag** and path being ~/not-the-flag, then it said that the path file already exists then i removed it and again creted it then ran /challenge/catflag, which gave the flag.
 
