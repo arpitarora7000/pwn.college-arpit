@@ -314,8 +314,27 @@ I simply used the diff command with arguments as <(command1) <(command2) which g
 None.
 
 # Writing to multiple programs
-### Key points
-1. One can also use process substitution for writing to commands, can duplicate data to two files with tee.
-2. 
- 
+### Problem Statement
 
+Now you've learned that process substitution can make command output appear as files for reading with <(command). But you can also use process substitution for writing to commands!
+
+You can duplicate data to two files with tee:
+
+<img width="457" height="164" alt="Screenshot 2025-10-01 at 7 14 23 PM" src="https://github.com/user-attachments/assets/9f56eb2d-ac3a-42c9-b9b5-a0ba46604588" />
+
+And you've used tee to duplicate data to a file and a command:
+
+<img width="455" height="137" alt="Screenshot 2025-10-01 at 7 14 43 PM" src="https://github.com/user-attachments/assets/3eef9ae5-80f7-462f-98d0-dc2f5e93b8fc" />
+
+But what about duplicating to two commands? As tee says in its manpage, it's designed to write to files and to standard output:
+
+> TEE(1)                           User Commands                          TEE(1)
+
+> NAME
+       tee - read from standard input and write to standard output and files
+
+
+# My solve
+**Flag :** 'pwn.college{UhZKjb9oPIDc-uq54KJMFca_grL.QXwgDN1wCOwIzNzEzW}'
+
+<img width="588" height="211" alt="Screenshot 2025-10-01 at 7 16 21 PM" src="https://github.com/user-attachments/assets/12e5c825-03da-4f70-a48c-7f6a16fb0e97" />
