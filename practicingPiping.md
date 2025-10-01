@@ -277,4 +277,45 @@ I ran /challenge/pwn | /challenge.college, which gave out some information, then
 
 ### References
 None.
+
+# Process substitution for input
+### Key Points
+1. Sometimes we require to compare output of commands, one way can be to assign those outputs to 2 files and use _diff_ command for comparison, but there is a more elegant way to do it.
+2. Instead of doing
  
+<img width="394" height="80" alt="Screenshot 2025-10-01 at 3 11 16 PM" src="https://github.com/user-attachments/assets/33fa206c-7f31-4013-8231-e6682a99f3e3" />
+
+we can play on the philosophy that linux follows _everything is a file_ That is, the system strives to provide file-like access to most resources, including the input and output of running programs! The shell follows this philosophy, allowing you to, for example, use any utility that takes file arguments on the command line and hook it up to the output of programs, as you learned in the previous few levels.
+3. Interestingly, we can go further, and hook input and output of programs to arguments of commands. This is done using _Process Substitution_.
+4. <(command) will run the command and create a temporary file with the output of the command, this isn't a real file, this is what is called a named pipe.
+5. example:
+
+<img width="452" height="97" alt="Screenshot 2025-10-01 at 4 10 06 PM" src="https://github.com/user-attachments/assets/f88a7363-4087-4f83-91dc-3aa8f21e510f" />
+
+<(echo hi) creates a temporary file with the output of _echo hi_ in it which is _hi_, then running echo command  with argument of that particular file as shown in the image gives the file name.
+6. If we use it with cat, it'll print hi in the terminal.
+7. We can also specify multiple times, like:
+
+
+<img width="472" height="163" alt="Screenshot 2025-10-01 at 4 13 47 PM" src="https://github.com/user-attachments/assets/dfb50fc5-9ff3-4884-b198-999857ff8520" />
+
+8. Now, I am supposed to differentiate between outputs of two different commands, one of which gives decoy flags and the other gives all the decoy flags with the real flag, using the _diff_ command.
+
+## My solve
+**Flag :**'pwn.college{8uE0XTPklUGrh7CBCb3RB76lNzR.0lNwMDOxwCOwIzNzEzW}'
+I simply used the diff command with arguments as <(command1) <(command2) which gave out the flag.
+
+<img width="586" height="94" alt="Screenshot 2025-10-01 at 4 16 33 PM" src="https://github.com/user-attachments/assets/c067eb61-e747-4445-b8a7-fbce57b1df03" />
+
+## What I Learned
+- I learned about a very useful thing, where comparing between outputs of two commands is made very easy, instead of assigning the outputs to files and then comparing we can simply use **<(command)** which makes a temporary file consisting of the output of that particular command.
+
+### References
+None.
+
+# Writing to multiple programs
+### Key points
+1. One can also use process substitution for writing to commands, can duplicate data to two files with tee.
+2. 
+ 
+
