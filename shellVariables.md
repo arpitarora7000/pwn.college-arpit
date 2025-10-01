@@ -179,8 +179,31 @@ I just used `read` for the variable PWN and entered COLLEGE as my input, which t
 None.
 
 # Reading files
-### Key points
-1. 
+### Problem statement
+Often, when shell users want to read a file into an environment variable, they do something like:
+
+<img width="442" height="111" alt="Screenshot 2025-10-01 at 5 57 13 PM" src="https://github.com/user-attachments/assets/4dd4a73d-c6e8-45d9-a992-17c166f34361" />
+
+This works, but it represents what grouchy hackers call a "Useless Use of Cat". That is, running a whole other program just to read the file is a waste. It turns out that you can just use the powers of the shell!
+
+Previously, you read user input into a variable. You've also previously redirected files into command input! Put them together, and you can read files with the shell.
+
+<img width="439" height="115" alt="Screenshot 2025-10-01 at 5 57 34 PM" src="https://github.com/user-attachments/assets/7a19514c-f4ff-4766-80c3-ee152745eaad" />
+
+What happened there? The example redirects some_file into the standard input of read, and so when read reads into VAR, it reads from the file! Now, use that to read /challenge/read_me into the PWN environment variable, and we'll give you the flag! The /challenge/read_me will keep changing, so you'll need to read it right into the PWN variable with one command!
+
+## Solution
+**Flag :** 'pwn.college{IGpcsujlVkMX7Z0pgU5HqDB4kpF.QXwIDO0wCOwIzNzEzW}'
+
+Did what's present in the image:
+
+<img width="588" height="102" alt="Screenshot 2025-10-01 at 5 58 53 PM" src="https://github.com/user-attachments/assets/b6f51ba4-d22d-4e2f-9394-af7bd2d17ee3" />
+
+## What I Learneds
+- Learned about using read builtin and using redirection to assign values to the given variable from the given file.
+
+### References
+SENSAI.
 
 
 
