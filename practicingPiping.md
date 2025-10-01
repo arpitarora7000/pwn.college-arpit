@@ -239,7 +239,42 @@ No external references.
 
 # Duplicating piped data with tee
 ### Key points
-1. 
+1. When data is piped from one command to another, it doesn't show up on the screen, which not always desired.
+2. One might want to see the data as it flows through between commands to debug unintended outcomes (e.g., "why did that second command not work???").
+3. The _tee_ command named after "T-splitter" from _plumbing_ pipes, duplicates data flowing through your pipes to any number of files provided on the command line. For example:
 
+<img width="437" height="185" alt="Screenshot 2025-10-01 at 1 08 39 PM" src="https://github.com/user-attachments/assets/635032d1-3113-40d3-b550-905fc6ae01de" />
 
+by providing 2 files to tee, we ended up with 3 copies of the piped-in data: one to stdout, one to the pwn file, and one to the college file.
+4. This can be used to debug things
+
+> hacker@dojo:~$ command_1 | command_2
+>
+> Command 2 failed!
+>
+> hacker@dojo:~$ command_1 | tee cmd1_output | command_2
+>
+> Command 2 failed!
+>
+> hacker@dojo:~$ cat cmd1_output
+>
+> Command 1 failed: must pass --succeed!
+>
+> hacker@dojo:~$ command_1 --succeed | command_2
+>
+> Commands succeeded!
+
+5. This challenge requires /challenge/pwn getting piped into /challenge/college, but it'll need for me to intercept data, to find what pwn needs.
+## My solve
+**Flag :** 'pwn.college{gHvflb2n1HxzhrVB4SwrsH19IYO.QXxITO0wCOwIzNzEzW}'
+
+I ran /challenge/pwn | /challenge.college, which gave out some information, then i catted the pwn file which gave out the secret argument, then again ran the piping command which finally gave the flag.
+
+<img width="599" height="232" alt="Screenshot 2025-10-01 at 1 27 55 PM" src="https://github.com/user-attachments/assets/6418a93b-bbf1-4abc-bac6-48359a8f025a" />
+
+## What I Learned
+- Learned about the new _tee_ command and how it can be useful to debug and show the flowing data when piped.
+
+### References
+None.
  
