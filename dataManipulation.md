@@ -114,5 +114,12 @@ I just simply wrote the following command:
 ### References
 
 No external references used.
- 
-  
+
+# Extracting specific sections of text
+### Key points
+1. Sometimes, you want to grab specific columns of data, such as the first column, the third column, or the 42nd column. For this, there's the cut command.
+2. For example, imagine that you have the following data file:
+
+<img width="453" height="108" alt="Screenshot 2025-10-02 at 10 58 13 PM" src="https://github.com/user-attachments/assets/1a56e068-6243-434b-822e-1a2e53468483" />
+
+3. 
