@@ -122,4 +122,57 @@ No external references used.
 
 <img width="453" height="108" alt="Screenshot 2025-10-02 at 10 58 13 PM" src="https://github.com/user-attachments/assets/1a56e068-6243-434b-822e-1a2e53468483" />
 
-3. 
+3. One could use cut to extract specific columns:
+
+<img width="461" height="267" alt="Screenshot 2025-10-06 at 11 33 55 PM" src="https://github.com/user-attachments/assets/7f1f3ae0-8953-40ab-adff-d1c326a9486a" />
+
+The `-d` argument specifies the column _delimiter_ (how columns are separated). In this case, it's a space character. Of course, it has to be in quotes here so that the shell knows that the space is an argument rather than a space separating other arguments!
+
+The `-f` argument specifies the field number (which column to extract).
+
+4. Here, the /challenge/run program gives a bunch of lines with random numbers and single characters (characters of the flag) as columns. Use `cut` to extract the flag characters, then pipe them to `tr -d "\n"` (like the previous level!) to join them together into a single line. Your solution will look something like `/challenge/run | cut ??? | tr ???`, with the ??? filled out.
+
+## My solve
+**Flag :** `pwn.college{wWZDmaIc4hHc9sRtYqDAV8ajoK6.01NxEzNxwCOwIzNzEzW`
+
+I followed what was written in the problem statement, first I ran the /challenge/run program, it was something like this:
+
+<img width="375" height="232" alt="Screenshot 2025-10-06 at 11 43 19 PM" src="https://github.com/user-attachments/assets/c5d7d087-f190-4284-b8f2-c28cca81f7a2" />
+
+And few more similar lines, so i used the same command as in the example, _delimiter_ being the space between columns, then, piped it to the given program, to remove all new line characters, so that all the letters are in one line, which was the flag.
+
+<img width="673" height="51" alt="Screenshot 2025-10-06 at 11 45 22 PM" src="https://github.com/user-attachments/assets/c6137d55-e3d5-4b97-a54a-45616abc2c8c" />
+
+## What I Learned
+- Learned about the new `cut` command, used to get specific sections of an output, and its 2 useful arguments, `-d` and `-f`, which are used for defining column separator, and the specific no. of column required, respectively.
+
+### References
+None.
+
+# Sorting data
+### Key points
+1. Files (or output lines of commands) aren't always in the order you need them! The sort command helps you organize data. It reads lines from input (or files) and outputs them in sorted order:
+
+<img width="453" height="390" alt="Screenshot 2025-10-06 at 11 49 12 PM" src="https://github.com/user-attachments/assets/629875e3-1dab-4741-8b5a-fa7711d8823d" />
+
+ By default, sort orders lines alphabetically. Arguments can change    this:
+
+ - -r: reverse order (Z to A)
+ - -n: numeric sort (for numbers)
+ - -u: unique lines only (remove duplicates)
+ - -R: random order!
+  
+2. In this challenge, there's a file at /challenge/flags.txt containing 100 fake flags, with the real flag mixed among them. When sorted alphabetically, the real flag will be at the end.
+
+## My solve
+**Flag :** `pwn.college{AZiEE16W4jBh-Y0fNZxFQ9JzH-n.0FM0MDOxwCOwIzNzEzW}`
+
+I just ran the command `sort /challenge/flags.txt`, which sorted the output and then I got my flag from there.
+
+<img width="497" height="229" alt="Screenshot 2025-10-06 at 11 55 19 PM" src="https://github.com/user-attachments/assets/37cea14f-2e6b-4190-a543-f0304c9660f0" />
+
+## What I Learned
+- Learned about the new `sort` command, its different and useful arguments.
+
+### References
+No external references.
